@@ -1,0 +1,280 @@
+/* styles.css */
+/*Hoja de estilos, para todas las paginas*/
+/* Reset de márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Estilos para body*/
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/*Estilos para el header*/
+header {
+  background-color: #252525;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+/*El texto que pone -- RETRO --*/
+header .retro {
+  font-family: 'Press Start 2P', cursive;
+  color: red;
+  font-size: 15px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover {
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+header div a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 40px 0;
+  background-color: #333;
+}
+
+.catalog-section {
+  margin-bottom: 40px;
+}
+
+.catalog-section h2 {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cuadrícula adaptable */
+  gap: 20px;
+  margin: 20px;
+  justify-content: center;
+}
+
+.game-item {
+  background-color: #111;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  border: 5px solid black;
+}
+
+.game-cover {
+  width: 100%;
+  height: 250px; /* Tamaño ajustado de la carátula */
+  margin-bottom: 10px;
+  overflow: hidden;
+  border: 5px solid black;
+}
+
+.game-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.game-item h3 {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+.game-item-portada {
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  border: 5px solid black;
+  background-color: #252525;
+}
+
+.game-cover-portada {
+  width: 100%;
+  height: 100%; /* Tamaño ajustado de la carátula */
+  overflow: hidden;
+}
+
+.game-cover-portada img {
+  width: 400px;
+  height: 350px;
+  object-fit: fill;
+  border: 5px solid black;
+}
+
+.game-item-portada h3 {
+  margin-top: 20px;
+  font-size: 1.2em;
+  background-color: #252525;
+  color: #f8f8f8;
+}
+
+.game-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 5px rgba(255, 0, 0, 0.6);
+}
+
+.historia-consola {
+  height: 128px;
+  font-size: small;
+  padding: 10px;
+}
+
+.historia-consola h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: large;
+  margin-bottom: 13px;
+}
+
+.historia-consola h3 {
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* Contenedor de consolas */
+.consolas-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  margin: 30px;
+}
+
+/* Estilos para cada consola */
+.consola-juegos {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  background-color: #000000;
+  text-align: center;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  border: 5px solid black;
+}
+
+/* Imagen de consola */
+.consola-img {
+  margin-bottom: 15px;
+}
+
+/*Estilos footer*/
+footer {
+  background-color: #252525;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 0.9em;
+}
+
+/* Modelo responsive */
+@media (max-width: 1750px) {
+  .consolas-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .consola-juegos {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .game-item {
+    padding: 10px;
+  }
+
+  .game-cover {
+    height: 200px;
+  }
+
+  .game-item h3 {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 560px) {
+  .game-list {
+    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  }
+
+  .IMGcargando {
+    object-fit: fill;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-cover {
+    height: 180px;
+  }
+
+  .game-item h3 {
+    font-size: 1em;
+  }
+
+  .game-cover img {
+    object-fit: fill;
+  }
+
+  .juegos {
+    width: 350px;
+  }
+  
+  .game-cover-portada {
+    object-fit: contain;
+  }
+
+  .game-cover-portada img {
+    width: 100%;
+    height: 100%;
+  }
+}

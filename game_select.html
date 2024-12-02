@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MacroGames - Retro</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="./scripts/main-select.js" defer></script>
+  <script src="./scripts/games.js" defer></script>
+  <script src="./scripts/play.js" defer></script>
+</head>
+<body>
+
+  <!-- header: tenemos el logo y la barra de navegacion -->
+  <header>
+    <div class="container">
+      <a href="./index.html"><h1>MacroGames<p class="retro">-- RETRO --</p></h1></a>
+      <nav>
+        <ul>
+          <hr>
+          <li><a href="./index.html">HOME</a></li>
+          <hr>
+          <!-- Al hacer click los enlaces no redirigiran a ningun lado, en cambio ejecutaran la funcion para imprimir el catalogo de la consola seleccionada-->
+          <li><a href="#" onclick="cargarCatalogoSeleccionado(this.id)" id="PSX">PSX</a></li>
+          <hr>
+          <li><a href="#" onclick="cargarCatalogoSeleccionado(this.id)" id="N64">N64</a></li>
+          <hr>
+          <li><a href="#" onclick="cargarCatalogoSeleccionado(this.id)" id="GBA">GBA</a></li>
+          <hr>
+          <li><a href="#" onclick="cargarCatalogoSeleccionado(this.id)" id="NDS">NDS</a></li>
+          <hr>
+          <li><a href="#" onclick="cargarCatalogoSeleccionado(this.id)" id="SNES">SNES</a></li>
+          <hr>
+          <li><a href="#" onclick="cargarCatalogoSeleccionado(this.id)" id="ARCADE">ARCADE</a></li>
+          <hr>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- main: aqui se colocara desde JavaScript, todo el codigo del catalogo de la consola seleccionada-->
+  <main id="main_select"></main>
+
+  <!-- footer: copyright -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 MacroGames. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

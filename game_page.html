@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MacroGames - Retro</title>
+  <link rel="stylesheet" href="./styles/games.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="./scripts/games.js" defer></script>
+  <script src="./scripts/play.js" defer></script>
+</head>
+<body>
+
+  <!-- header: tenemos el logo y la barra de navegacion -->
+  <header>
+    <div class="container">
+      <a href="./index.html"><h1>MacroGames<p class="retro">-- RETRO --</p></h1></a>
+      <nav>
+        <ul>
+          <hr>
+          <li><a href="./index.html">HOME</a></li>
+          <hr>
+          <!-- Al redireccionar, le pasamos tambien un parametro llamado consola, con el valor de la consola seleccionada -->
+          <li><a href="./game_select.html?consola=PSX" id="PSX">PSX</a></li>
+          <hr>
+          <li><a href="./game_select.html?consola=N64" id="N64">N64</a></li>
+          <hr>
+          <li><a href="./game_select.html?consola=GBA" id="GBA">GBA</a></li>
+          <hr>
+          <li><a href="./game_select.html?consola=NDS" id="NDS">NDS</a></li>
+          <hr>
+          <li><a href="./game_select.html?consola=SNES" id="SNES">SNES</a></li>
+          <hr>
+          <li><a href="./game_select.html?consola=ARCADE" id="ARCADE">ARCADE</a></li>
+          <hr>
+       </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- main: aqui se colocara desde JavaScript, el juego a jugar y el apartado de otros juegos-->
+  <main class="game-page">
+
+    <!-- section: esto es el area en el que se mostrara el iframe del juego -->
+    <section class="game-play-area">
+      <h2>- <span id="game_name"></span> -</h2>
+      <div class="game-frame" id="game_iframe">
+
+      </div>
+    </section>
+
+    <!-- section: area en la que se mostrara el apartado de otros juegos -->
+    <section id="otros_juegos"></section>
+
+  </main>
+
+  <!-- footer: copyright -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 MacroGames. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
