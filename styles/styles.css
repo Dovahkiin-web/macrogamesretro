@@ -221,6 +221,10 @@ footer p {
     font-size: 2em;
   }
 
+  hr {
+    margin: 0 15% 0 15%;
+  }
+
   nav ul {
     flex-direction: column;
   }
@@ -250,9 +254,7 @@ footer p {
   .IMGcargando {
     object-fit: fill;
   }
-}
 
-@media (max-width: 480px) {
   .game-cover {
     height: 180px;
   }
@@ -266,7 +268,7 @@ footer p {
   }
 
   .juegos {
-    width: 350px;
+    width: 100%;
   }
   
   .game-cover-portada {
@@ -278,3 +280,4 @@ footer p {
     height: 100%;
   }
 }
+
