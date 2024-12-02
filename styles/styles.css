@@ -294,3 +294,13 @@ footer p {
     font-size: smaller;
   }
 }
+
+@media (max-width: 410px) {
+  .game-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .game-play-area {
+    font-size: x-small;
+  }
+}
