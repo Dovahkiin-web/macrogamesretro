@@ -281,3 +281,16 @@ footer p {
   }
 }
 
+@media (max-width: 465px) {
+  .consola-juegos {
+    width: 100%;
+  }
+
+  .consola-img {
+    width: 100%;
+  }
+
+  .historia-consola h3 {
+    font-size: smaller;
+  }
+}
