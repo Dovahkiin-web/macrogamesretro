@@ -102,14 +102,6 @@ main {
   opacity: 1;
 }
 
-/*Div de la pagina Login*/
-#div_login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 81vh;
-}
-
 .catalog-section {
   margin-bottom: 40px;
 }

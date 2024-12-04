@@ -1,3 +1,11 @@
+/*Div de la pagina Login*/
+#div_login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 81vh;
+}
+
 .div_loader {
     min-height: 300px;
     max-width: 500px;

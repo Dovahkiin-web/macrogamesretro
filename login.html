@@ -42,7 +42,7 @@
     </div>
   </header>
 
-  <div id="div_login">
+  <form id="div_login" action="./php/login.php" method="GET">
     <div class="div_loader">
         <input id="signin" type="radio" name="tab" checked="checked"/>
         <input id="register" type="radio" name="tab"/>
@@ -57,7 +57,7 @@
               <input class="text" type="password" placeholder=""/>
             </div>
             <div class="input">
-                <button type="submit">LOGIN</button>
+                <button type="submit" name="btn_login">LOGIN</button>
             </div>
           </div>
           <div class="page signup">
@@ -70,7 +70,7 @@
               <input class="text" type="password" placeholder=""/>
             </div>
             <div class="input">
-              <button type="submit">REGISTER</button>
+              <button type="submit" name="btn_register">REGISTER</button>
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@
             Sing Up</label>
         </div>
       </div>
-    </div>
+    </form>
 
   <!-- footer: copyright -->
   <footer>
