@@ -29,12 +29,10 @@ function redirigirConParametro(linkId) {
     // Obtenemos el id de la URL
     let linkId = obtenerParametroURL('id');
   
-    game_name.innerHTML = linkId;
-  
     for (let i = 0; i < juegos.length; i++) {
       for (let j = 0; j < juegos[i].length; j++) {
           if (linkId == juegos[i][j]) {
-              reproducirJuego(i, j);
+              reproducirJuego(i, j, linkId);
               break;
           }   
           
@@ -42,15 +40,17 @@ function redirigirConParametro(linkId) {
   }
   
   //Funcion que reproduce el juego seleccionado
-  function reproducirJuego(consola, juego) {
+  function reproducirJuego(consola, juego, nombre) {
     let textoIframe = '';
     let otrosJuegos = '';
 
     if (iframes[consola][juego] == '') {
         // Si no encuentra el iframe, muestra una imagen de error.
-        textoIframe = '<img src="./assets/images/error.png" class="IMGcargando" width="350px">';
+        game_name.innerHTML = 'No se ha encontrado el juego: ' + nombre;
+        textoIframe = '<img src="./assets/images/error.gif" width="200px">';
     } else {
       // Si encuentra el iframe, muestra el juego.
+      game_name.innerHTML = nombre;
         textoIframe =`<hr><iframe src="https://www.retrogames.cc/embed/${iframes[consola][juego]}.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe><hr>` ;
     }
 

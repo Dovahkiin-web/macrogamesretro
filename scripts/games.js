@@ -63,7 +63,7 @@ const iframespsx = [
   '41780-fifa-soccer-2003',
   '43658-final-fantasy-vii-usa-disc-1',
   '45186-formula-one-2001-europe-en-fi',
-  '41826-gran-turismo',
+  '',//41826-gran-turismo
   '45177-harry-potter-and-the-philosophers-stone-europe-en-fr-de',
   '43155-legacy-of-kain-soul-reaver',
   '43154-medal-of-honor-underground',
