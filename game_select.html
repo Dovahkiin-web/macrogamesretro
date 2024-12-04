@@ -11,6 +11,7 @@
   <script src="./scripts/main-select.js" defer></script>
   <script src="./scripts/games.js" defer></script>
   <script src="./scripts/play.js" defer></script>
+  <script src="./scripts/api.js" defer></script>
 </head>
 <body>
 
@@ -41,8 +42,8 @@
     </div>
   </header>
 
-  <!-- Se mostrará mientras no haya cargado la pagina -->
-  <div id="loader">cargando...</div>
+  <!-- Mostrará que está cargando antes de que la pagina se cargue por completo -->
+  <div id="div_loader"><span id="loader"></span></div>
 
   <!-- main: aqui se colocara desde JavaScript, todo el codigo del catalogo de la consola seleccionada-->
   <main id="main_select" style="display: none;"></main>

@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <script src="./scripts/games.js" defer></script>
   <script src="./scripts/play.js" defer></script>
+  <script src="./scripts/api.js" defer></script>
 </head>
 <body>
 
@@ -41,8 +42,11 @@
     </div>
   </header>
 
+  <!-- Mostrará que está cargando antes de que la pagina se cargue por completo -->
+  <div id="div_loader"><span id="loader"></span></div>
+
   <!-- main: aqui se colocara desde JavaScript, el juego a jugar y el apartado de otros juegos-->
-  <main class="game-page">
+  <main id="main_game" class="game-page" style="display: none;">
 
     <!-- section: esto es el area en el que se mostrara el iframe del juego -->
     <section class="game-play-area">

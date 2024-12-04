@@ -98,5 +98,6 @@ function redirigirConParametro(linkId) {
     if (window.location.pathname.includes("game_page.html")) {
       window.onload = function() {
         ejecutarAccionConId();
+        animacionCarga('main_game');
       };
     }

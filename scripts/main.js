@@ -56,4 +56,6 @@ function cargarCatalogo() {
     }
 
     main_index.innerHTML = texto;
+    
+    animacionCarga('main_index');
 }

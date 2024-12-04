@@ -40,6 +40,5 @@ window.onload = function() {
        cargarCatalogoSeleccionado(consola);
     }
 
-    document.getElementById('loader').style.display = 'none';
-    document.getElementById('main_select').style.display = 'block';
+    animacionCarga('main_select');
  };
