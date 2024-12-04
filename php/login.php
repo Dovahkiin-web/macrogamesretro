@@ -1,15 +1,3 @@
-<?php 
-
-if ( isset ( $_REQUEST['btn_login'] ) || isset ( $_REQUEST['btn_register'] ) ){
-    if ( isset ( $_REQUEST['btn_login'] ) ) {
-        echo "Te has logeado";
-    } elseif (isset($_REQUEST['btn_register'])) {
-        echo "Te has registrado";
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,10 +5,11 @@ if ( isset ( $_REQUEST['btn_login'] ) || isset ( $_REQUEST['btn_register'] ) ){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MacroGames - Retro</title>
-  <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="stylesheet" href="./styles/login.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/login.css">
+  <script src="../scripts/login.js" type="text/javascript"></script>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="icon" href="./assets/images/favicon.ico">
+  <link rel="icon" href="../assets/images/favicon.ico">
 </head>
 <!-- body: Cuando se cargue por completo, ejecuta la funcion -->
 <body>
@@ -28,33 +17,36 @@ if ( isset ( $_REQUEST['btn_login'] ) || isset ( $_REQUEST['btn_register'] ) ){
   <!-- header: tenemos el logo y la barra de navegacion -->
   <header>
     <div class="container">
-      <a href="./index.html"><img src="./assets/images/logo.png" height="70" width="350"></a>
+      <a href="../index.html"><img src="../assets/images/logo.png" height="70" width="350"></a>
       <nav>
         <ul>
           <hr>
-          <li><a href="./index.html">HOME</a></li>
+          <li><a href="../index.html">HOME</a></li>
           <hr>
           <!-- Al redireccionar, le pasamos tambien un parametro llamado consola, con el valor de la consola seleccionada -->
-          <li><a href="./game_select.html?consola=PSX" id="PSX">PSX</a></li>
+          <li><a href="../game_select.html?consola=PSX" id="PSX">PSX</a></li>
           <hr>
-          <li><a href="./game_select.html?consola=N64" id="N64">N64</a></li>
+          <li><a href="../game_select.html?consola=N64" id="N64">N64</a></li>
           <hr>
-          <li><a href="./game_select.html?consola=GBA" id="GBA">GBA</a></li>
+          <li><a href="../game_select.html?consola=GBA" id="GBA">GBA</a></li>
           <hr>
-          <li><a href="./game_select.html?consola=NDS" id="NDS">NDS</a></li>
+          <li><a href="../game_select.html?consola=NDS" id="NDS">NDS</a></li>
           <hr>
-          <li><a href="./game_select.html?consola=SNES" id="SNES">SNES</a></li>
+          <li><a href="../game_select.html?consola=SNES" id="SNES">SNES</a></li>
           <hr>
-          <li><a href="./game_select.html?consola=ARCADE" id="ARCADE">ARCADE</a></li>
+          <li><a href="../game_select.html?consola=ARCADE" id="ARCADE">ARCADE</a></li>
           <hr>
-          <li><a href="#">SING UP/IN</a></li>
+          <li><a href="./login.php">SING UP/IN</a></li>
           <hr>
        </ul>
       </nav>
     </div>
   </header>
 
-  <form id="div_login" action="./php/login.php" method="GET">
+  <div id="div_login_mensaje" style="display: none;">
+    <div id="login_mensaje"></div>
+  </div>
+  <form id="div_login" action="login.php" method="GET">
     <div class="div_loader">
         <input id="signin" type="radio" name="tab" checked="checked"/>
         <input id="register" type="radio" name="tab"/>
@@ -94,6 +86,20 @@ if ( isset ( $_REQUEST['btn_login'] ) || isset ( $_REQUEST['btn_register'] ) ){
         </div>
       </div>
     </form>
+
+    <?php 
+
+        if ( isset ( $_REQUEST['btn_login'] ) || isset ( $_REQUEST['btn_register'] ) ){
+            if ( isset ( $_REQUEST['btn_login'] ) ) {
+                $mensaje = "Te has logeado";
+            } elseif (isset($_REQUEST['btn_register'])) {
+                $mensaje = "Te has registrado";
+            }
+
+            echo "<script type='text/javascript'>logeadoRegistrado('$mensaje');</script>";
+        }
+
+    ?>
 
   <!-- footer: copyright -->
   <footer>

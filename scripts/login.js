@@ -1,6 +1,11 @@
-// Demo or didn't happen
+function logeadoRegistrado(mensaje) {
+    let formulario = document.getElementById('div_login');
+    let mensajeFinal = document.getElementById('login_mensaje');
 
-var signin = document.querySelector('#signin')
-var register = document.querySelector('#register')
-setTimeout(function(){ register.checked = true}, 1000)
-setTimeout(function(){ signin.checked = true}, 2000)
+    document.getElementById('login_mensaje').style.display = 'none';
+    mensajeFinal.style.display = 'block';
+}
+
+function mostrarMensaje(mensaje) {
+    
+}
