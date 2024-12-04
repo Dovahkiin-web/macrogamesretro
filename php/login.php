@@ -25,8 +25,6 @@
           <hr>
           <li><a href="#">HOME</a></li>
           <hr>
-          <li><a href="./php/login.php">LOGIN</a></li>
-          <hr>
           <!-- Al redireccionar, le pasamos tambien un parametro llamado consola, con el valor de la consola seleccionada -->
           <li><a href="./game_select.html?consola=PSX" id="PSX">PSX</a></li>
           <hr>
@@ -49,7 +47,7 @@
   <div id="div_loader"><span id="loader"></span></div>
   
   <!-- main: aqui se colocara desde JavaScript, todo el codigo del catalogo-->
-  <main id="main_index" style="display: none;"></main>
+  <main id="main_"></main>
 
   <!-- footer: copyright -->
   <footer>
