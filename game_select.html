@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MacroGames - Retro</title>
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="icon" href="./assets/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <script src="./scripts/main-select.js" defer></script>
   <script src="./scripts/games.js" defer></script>
@@ -40,9 +41,11 @@
     </div>
   </header>
 
-  <!-- main: aqui se colocara desde JavaScript, todo el codigo del catalogo de la consola seleccionada-->
-  <main id="main_select"></main>
+  <!-- Se mostrará mientras no haya cargado la pagina -->
+  <div id="loader">cargando...</div>
 
+  <!-- main: aqui se colocara desde JavaScript, todo el codigo del catalogo de la consola seleccionada-->
+  <main id="main_select" style="display: none;"></main>
   <!-- footer: copyright -->
   <footer>
     <div class="container">

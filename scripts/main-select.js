@@ -39,4 +39,7 @@ window.onload = function() {
        // Llamamos a la función con el valor de consola, para mostrar el catalogo de la misma
        cargarCatalogoSeleccionado(consola);
     }
+
+    document.getElementById('loader').style.display = 'none';
+    document.getElementById('main_select').style.display = 'block';
  };
