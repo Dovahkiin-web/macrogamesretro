@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../styles/login.css">
   <script src="../scripts/login.js" type="text/javascript"></script>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="icon" href="../assets/images/favicon.ico">
 </head>
 <!-- body: Cuando se cargue por completo, ejecuta la funcion -->
@@ -36,7 +37,7 @@
           <hr>
           <li><a href="../game_select.html?consola=ARCADE" id="ARCADE">ARCADE</a></li>
           <hr>
-          <li><a href="./login.php">SING UP/IN</a></li>
+          <li><a href="./login.php"><i class="material-icons" style="font-size: 18px;">input</i></a></li>
           <hr>
        </ul>
       </nav>
@@ -91,9 +92,9 @@
 
         if ( isset ( $_REQUEST['btn_login'] ) || isset ( $_REQUEST['btn_register'] ) ){
             if ( isset ( $_REQUEST['btn_login'] ) ) {
-                $mensaje = "Te has logeado";
+                $mensaje = "LOGEADO";
             } elseif (isset($_REQUEST['btn_register'])) {
-                $mensaje = "Te has registrado";
+                $mensaje = "REGISTRADO";
             }
 
             echo "<script type='text/javascript'>logeadoRegistrado('$mensaje');</script>";

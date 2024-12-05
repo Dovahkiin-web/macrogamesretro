@@ -1,11 +1,14 @@
-function logeadoRegistrado(mensaje) {
+function logeadoRegistrado(logReg) {
     let formulario = document.getElementById('div_login');
-    let mensajeFinal = document.getElementById('login_mensaje');
+    let mensaje = document.getElementById('login_mensaje');
+    let divMensaje = document.getElementById('div_login_mensaje');
 
-    document.getElementById('login_mensaje').style.display = 'none';
-    mensajeFinal.style.display = 'block';
+    mostrarMensaje(logReg, mensaje);
+
+    formulario.style.display = 'none';
+    divMensaje.style.display = 'block';
 }
 
-function mostrarMensaje(mensaje) {
-    
+function mostrarMensaje(logReg, mensaje) {
+    mensaje.innerHTML = `Te has ` + logReg + ' correctamente';
 }
