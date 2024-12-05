@@ -1,3 +1,23 @@
+<?php 
+
+      if ( isset ( $_REQUEST['btn_login'] ) || isset ( $_REQUEST['btn_register'] ) ){
+        if ( isset ( $_REQUEST['btn_login'] ) ) {
+          $user = $_POST["userLogin"];
+          $passwd = $_POST["passLogin"];
+          $mensaje = "LOGEADO";
+
+          echo "<script type='text/javascript'>comprobarLog('$user', '$passwd', '$mensaje');</script>";
+        } elseif (isset($_REQUEST['btn_register'])) {
+          $user = $_POST["userReg"];
+          $passwd = $_POST["passReg"];
+          $mensaje = "REGISTRADO";
+
+          echo "<script type='text/javascript'>comprobarReg('$user', '$passwd', '$mensaje');</script>";
+        }
+       }
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -47,37 +67,37 @@
   <div id="div_login_mensaje" style="display: none;">
     <div id="login_mensaje"></div>
   </div>
-  <form id="div_login" action="login.php" method="GET">
+  <div id="div_login">
     <div class="div_loader">
         <input id="signin" type="radio" name="tab" checked="checked"/>
         <input id="register" type="radio" name="tab"/>
         <div class="pages">
-          <div class="page">
+          <form class="page" action="./login.php" method="POST">
             <div class="input">
               <div class="title">NOMBRE DE USUARIO</div>
-              <input class="text" type="text" placeholder=""/>
+              <input class="text" type="text" name="userLogin" placeholder=""/>
             </div>
             <div class="input">
               <div class="title">CONTRASEÑA</div>
-              <input class="text" type="password" placeholder=""/>
+              <input class="text" type="password" name="passLogin" placeholder=""/>
             </div>
             <div class="input">
                 <button type="submit" name="btn_login">LOGIN</button>
             </div>
-          </div>
-          <div class="page signup">
+          </form>
+          <form class="page signup" action="./login.php" method="POST">
             <div class="input">
               <div class="title">NOMBRE DE USUARIO</div>
-              <input class="text" type="text" placeholder=""/>
+              <input class="text" type="text" name="userReg" placeholder=""/>
             </div>
             <div class="input">
               <div class="title">CONTRASEÑA</div>
-              <input class="text" type="password" placeholder=""/>
+              <input class="text" type="password" name="passReg" placeholder=""/>
             </div>
             <div class="input">
               <button type="submit" name="btn_register">REGISTER</button>
             </div>
-          </div>
+          </form>
         </div>
         <div class="tabs">
             <label class="tab text" for="signin">
@@ -86,21 +106,7 @@
             Sing Up</label>
         </div>
       </div>
-    </form>
-
-    <?php 
-
-        if ( isset ( $_REQUEST['btn_login'] ) || isset ( $_REQUEST['btn_register'] ) ){
-            if ( isset ( $_REQUEST['btn_login'] ) ) {
-                $mensaje = "LOGEADO";
-            } elseif (isset($_REQUEST['btn_register'])) {
-                $mensaje = "REGISTRADO";
-            }
-
-            echo "<script type='text/javascript'>logeadoRegistrado('$mensaje');</script>";
-        }
-
-    ?>
+    </div>
 
   <!-- footer: copyright -->
   <footer>
