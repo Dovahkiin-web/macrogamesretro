@@ -1,21 +1,19 @@
 <?php 
-
       if ( isset ( $_REQUEST['btn_login'] ) || isset ( $_REQUEST['btn_register'] ) ){
         if ( isset ( $_REQUEST['btn_login'] ) ) {
           $user = $_POST["userLogin"];
           $passwd = $_POST["passLogin"];
           $mensaje = "LOGEADO";
-
-          echo "<script type='text/javascript'>comprobarLog('$user', '$passwd', '$mensaje');</script>";
+          $funcion = 'comprobarLog';
         } elseif (isset($_REQUEST['btn_register'])) {
           $user = $_POST["userReg"];
           $passwd = $_POST["passReg"];
           $mensaje = "REGISTRADO";
-
-          echo "<script type='text/javascript'>comprobarReg('$user', '$passwd', '$mensaje');</script>";
+          $funcion = 'comprobarReg';
         }
-       }
 
+        echo "<script type='text/javascript'>$funcion('$user', '$passwd', '$mensaje');</script>";
+       }
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +25,7 @@
   <title>MacroGames - Retro</title>
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/login.css">
-  <script src="../scripts/login.js" type="text/javascript"></script>
+  <script src="../scripts/login.js" type="text/javascript" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="icon" href="../assets/images/favicon.ico">
