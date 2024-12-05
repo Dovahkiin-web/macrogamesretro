@@ -63,7 +63,7 @@ const iframespsx = [
   '41780-fifa-soccer-2003',
   '43658-final-fantasy-vii-usa-disc-1',
   '45186-formula-one-2001-europe-en-fi',
-  '',//41826-gran-turismo
+  '41826-gran-turismo',
   '45177-harry-potter-and-the-philosophers-stone-europe-en-fr-de',
   '43155-legacy-of-kain-soul-reaver',
   '43154-medal-of-honor-underground',
@@ -203,7 +203,7 @@ const iframessnes = [
   '16693-megaman-x-europe',
   '22796-puzzle-bobble-bust-a-move-europe',
   '19838-sunset-riders-europe',
-  '44282-super-mario-world-u-prototype',
+  '',//44282-super-mario-world-u-prototype
   '18686-terranigma-spain',
   '17359-ultimate-mortal-kombat-3-europe',
   '16834-wolfenstein-3d-europe',

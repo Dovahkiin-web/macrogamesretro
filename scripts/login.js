@@ -1,4 +1,4 @@
-const datos = [
+/*const datos = [
     ['Juan002', 'password123'], 
     ['Manolo1_9', 'abc123'],
     ['Pepepp32', 'pruebaPk32'],
@@ -42,7 +42,7 @@ function comprobarReg(usuario, password, mensaje) {
     //Ocultar formulario y mostrar mensaje
     formulario.style.display = 'none';
     divMensaje.style.display = 'block';
-}
+}*/
 
 //Funcion para mostrar el mensaje
 function mostrarMensaje(usuario, mensaje) {
