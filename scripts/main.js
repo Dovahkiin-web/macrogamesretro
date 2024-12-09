@@ -37,7 +37,7 @@ function cargarCatalogo() {
             texto += `
             <div class="consola-juegos">
                 <div class="consola">
-                    <img src="./assets/images/consolas/${consolas[i].toLocaleLowerCase()}.png" alt="${consolas[i]}" class="consola-img" height="300px" width="350px">
+                    <a href="./game_select.html?consola=${consolas[i]}" id="${consolas[i]}"><img src="./assets/images/consolas/${consolas[i].toLocaleLowerCase()}.png" alt="${consolas[i]}" class="consola-img" height="300px" width="350px"></a>
                     <div class="historia-consola">
                         <h1>${consolas[i]}</h1>
                         <hr>
