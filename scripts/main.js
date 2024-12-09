@@ -1,8 +1,8 @@
 //Numero de consolas totales
-const NUM_CONSOLAS = 7;
+const NUM_CONSOLAS = 8;
 
 //Array con los juegos de la portada
-const juegosPortada = ['GRAN TURISMO', 'SUPER MARIO 64', 'POKEMON ROJO FUEGO', 'NEW SUPER MARIO BROS', 'SUPER MARIO WORLD', 'PAC-MAN', 'SONIC THE HEDGEHOG'];
+const juegosPortada = ['GRAN TURISMO', 'SUPER MARIO 64', 'POKEMON ROJO FUEGO', 'NEW SUPER MARIO BROS', 'SUPER MARIO WORLD', 'PAC-MAN', 'SONIC THE HEDGEHOG', 'ALIEN VS PREDATOR'];
 
 //Array con los creadores de cada consola
 const creadorConsola = [
@@ -12,7 +12,8 @@ const creadorConsola = [
     'NINTENDO',
     'NINTENDO',
     'ATARI, NAMCO, SEGA...',
-    'SEGA'
+    'SEGA',
+    'ATARI'
 ];
 
 //Array con los lanzamientos de cada consola
@@ -23,7 +24,8 @@ const lanzamientoConsola = [
     '2004',
     '1990',
     '1978-1980',
-    '1990'
+    '1990',
+    '1994'
 ];
 
 //Cargamos el catalogo de la pagina inicial.

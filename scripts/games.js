@@ -1,11 +1,11 @@
 //Constante que almacena los nombres de las consolas que tenemos.
-const consolas = ['PSX', 'N64', 'GBA', 'NDS', 'SNES', 'ARCADE', 'GENESIS'];
+const consolas = ['PSX', 'N64', 'GBA', 'NDS', 'SNES', 'ARCADE', 'GENESIS', 'ATARI'];
 
 //Constantes que almacenan los nombres de los juegos de su respectiva consola (con el que se referenciará al id en el html).
 //Juegos PSX (PlayStation 1)
 const juegospsx = ['APE ESCAPE', 'BATMAN Y ROBIN', 'BLADE', 'BLOODY ROAR 2', 'BUSHIDO BLADE', 'BUSHIDO BLADE 2', 'CASTLEVANIA SYMPHONY OF THE NIGHT', 'CLOCK TOWER',
   'COMMAND CONQUER', 'CRASH BANDICOOT', 'CRASH BANDICOOT 3', 'CRASH TEAM RACING', 'DIGIMON WORLD',
-  'DRIVER 2', 'FIFA 2000', 'FIFA 2003', 'FINAL FANTASY VII', 'FORMULA 1 2001', 'GRAN TURISMO', 'HARRY POTTER Y LA PIEDRA FILOSOFAL',
+  'DRIVER 2', 'FIFA 2000', 'FIFA 2003', 'FINAL FANTASY VII', 'FORMULA 1 2001', 'GRAN TURISMO', 'HARRY POTTER Y LA PIEDRA FILOSOFAL', 'IRON SOLDIER 3',
   'LEGACY OF KAIN SOUL REAVER', 'MEDAL OF HONOR UNDERGROUND', 'MEGAMAN LEGENDS', 'MEGAMAN LEGENDS 2', 'METAL GEAR SOLID', 'RESIDENT EVIL', 'RESIDENT EVIL 2',
   'RESIDENT EVIL 3', 'RESIDENT EVIL SURVIVOR', 'SILENT HILL', 'SPIDER-MAN', 'SPIDER-MAN 2', 'SPYRO 1', 'SPYRO 2', 'SPYRO 3', 'SYPHON FILTER',
   'TEKKEN 3', 'TOMB RAIDER', 'TOMB RAIDER 2', 'TONY HAWKS PRO SKATER 2', 'VAGRANT STORY'];
@@ -40,8 +40,11 @@ const juegosarcade = ['BUBBLE BOBBLE', 'DONKEY KONG', 'FROGGER', 'GALAGA', 'MARV
 //Juegos Arcade
 const juegosgenesis = ['ASTERIX Y EL PODER DE LOS DIOSES', 'EL PATO LUCAS EN HOLLYWOOD', 'FIFA 98', 'LIGHT CRUSADER', 'LOS PITUFOS', 'MARSUPILAMI', 'SONIC CLASSIC HEROES', 'SONIC GENERATIONS 2', 'SONIC THE HEDGEHOG', 'SONIC THE HEDGEHOG 2', 'SONIC THE HEDGEHOG 3', 'SONIC THE HEDGEHOG 3 Y KNUCKLES', 'SONIC Y KNUCKLES', 'WHERE IN THE WORLD IS CARMEN SANDIEGO'];
 
+//Juegos Atari Jaguar
+const juegosatari = ['ALIEN VS PREDATOR', 'CHECKERED FLAG', 'CLUB DRIVE', 'DOOM', 'DRAGON THE BRUCE LEE STORY', 'FIGHT FOR LIFE', 'IRON SOLDIER 1','IRON SOLDIER 2','POWER DRIVE RALLY', 'RAYMAN', 'TEMPEST 2000', 'WOLFENSTEIN 3D', 'ZOOL 2'];
+
 //Array de te todos los juegos
-const juegos = [juegospsx, juegosn64, juegosgba, juegosnds, juegossnes, juegosarcade, juegosgenesis];
+const juegos = [juegospsx, juegosn64, juegosgba, juegosnds, juegossnes, juegosarcade, juegosgenesis, juegosatari];
 
 
 //Constantes que almacenan los iframes de los juegos de su respectiva consola.
@@ -67,6 +70,7 @@ const iframespsx = [
   '45186-formula-one-2001-europe-en-fi',
   '41826-gran-turismo',
   '45177-harry-potter-and-the-philosophers-stone-europe-en-fr-de',
+  '41896-iron-soldier-3',
   '43155-legacy-of-kain-soul-reaver',
   '43154-medal-of-honor-underground',
   '40783-mega-man-legends',
@@ -246,5 +250,22 @@ const iframesgenesis = [
   '19010-where-in-the-world-is-carmen-sandiego-usa-europe-en-fr-de-es-it'
 ]
 
+// Iframes atari jaguar
+const iframesatari = [
+  '34897-alien-vs-predator-world',
+  '34925-checkered-flag-world',
+  '34922-club-drive-world',
+  '34891-doom-world',
+  '34909-dragon-the-bruce-lee-story-world',
+  '34931-fight-for-life-world',
+  '34924-iron-soldier-world-v1-04',
+  '34889-iron-soldier-2-world',
+  '34893-power-drive-rally-world',
+  '34890-rayman-world',
+  '34905-tempest-2000-world',
+  '34937-wolfenstein-3d-world',
+  '34903-zool-2-world'
+];
+
 //Array de todos los iframes
-const iframes = [iframespsx, iframesn64, iframesgba, iframesnds, iframessnes, iframesarcade, iframesgenesis];
+const iframes = [iframespsx, iframesn64, iframesgba, iframesnds, iframessnes, iframesarcade, iframesgenesis, iframesatari];
