@@ -71,7 +71,14 @@ function redirigirConParametro(linkId) {
     //Creamos un array con los indices del array de juegos, nos servira como auxiliar para eliminar indices, y que no se repita ningun juego en el apartado.
     const indices = [...Array(juegos[consola].length).keys()];
 
-    for (let i = 0; i < 6; i++) {
+    //Creamos una constante que mostrará la cantidad de juegos recomendados.
+    let juegosMaxRecomend = 6;
+
+    if (juegos[consola].length < juegosMaxRecomend) {
+      juegosMaxRecomend = juegos[consola].length;
+    }
+
+    for (let i = 0; i < juegosMaxRecomend; i++) {
       //Generamos un numero aleatorio entre 0 y la longitud del array de indices (que tiene la misma longitud que el array original de juegos).
       const randomGame = Math.floor(Math.random() * indices.length)
 

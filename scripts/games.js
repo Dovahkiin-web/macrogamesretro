@@ -1,5 +1,5 @@
 //Constante que almacena los nombres de las consolas que tenemos.
-const consolas = ['PSX', 'N64', 'GBA', 'NDS', 'SNES', 'ARCADE'];
+const consolas = ['PSX', 'N64', 'GBA', 'NDS', 'SNES', 'ARCADE', 'GENESIS'];
 
 //Constantes que almacenan los nombres de los juegos de su respectiva consola (con el que se referenciará al id en el html).
 //Juegos PSX (PlayStation 1)
@@ -35,11 +35,13 @@ const juegossnes = ['ALADDIN', 'ASTERIX', 'ASTERIX Y OBELIX', 'DONKEY KONG COUNT
   'ULTIMATE MORTAL KOMBAT 3', 'WOLFENSTEIN 3D', 'X-MEN MUTANT APOCALYPSE'];
 
 //Juegos Arcade
-const juegosarcade = ['BUBBLE BOBBLE', 'DONKEY KONG', 'FROGGER', 'GALAGA', 'MARVEL VS CAPCOM', 'MEGA MAN', 'MORTAL KOMBAT', 'NEO BOMBERMAN', 'PAC-MAN', 'SPACE INVADERS', 
-  'STREET FIGHTER', 'TETRIS'];
+const juegosarcade = ['BUBBLE BOBBLE', 'DONKEY KONG', 'FROGGER', 'GALAGA', 'MARVEL VS CAPCOM', 'MEGA MAN', 'MORTAL KOMBAT', 'NEO BOMBERMAN', 'PAC-MAN', 'SPACE INVADERS', 'STREET FIGHTER', 'TETRIS'];
+
+//Juegos Arcade
+const juegosgenesis = ['ASTERIX Y EL PODER DE LOS DIOSES', 'EL PATO LUCAS EN HOLLYWOOD', 'FIFA 98', 'LIGHT CRUSADER', 'LOS PITUFOS', 'MARSUPILAMI', 'SONIC CLASSIC HEROES', 'SONIC GENERATIONS 2', 'SONIC THE HEDGEHOG', 'SONIC THE HEDGEHOG 2', 'SONIC THE HEDGEHOG 3', 'SONIC THE HEDGEHOG 3 Y KNUCKLES', 'SONIC Y KNUCKLES', 'WHERE IN THE WORLD IS CARMEN SANDIEGO'];
 
 //Array de te todos los juegos
-const juegos = [juegospsx, juegosn64, juegosgba, juegosnds, juegossnes, juegosarcade];
+const juegos = [juegospsx, juegosn64, juegosgba, juegosnds, juegossnes, juegosarcade, juegosgenesis];
 
 
 //Constantes que almacenan los iframes de los juegos de su respectiva consola.
@@ -203,7 +205,7 @@ const iframessnes = [
   '16693-megaman-x-europe',
   '22796-puzzle-bobble-bust-a-move-europe',
   '19838-sunset-riders-europe',
-  '',//44282-super-mario-world-u-prototype
+  '44282-super-mario-world-u-prototype',
   '18686-terranigma-spain',
   '17359-ultimate-mortal-kombat-3-europe',
   '16834-wolfenstein-3d-europe',
@@ -226,5 +228,23 @@ const iframesarcade = [
   '17612-tetris-usa'
 ];
 
+// Iframes Genesis
+const iframesgenesis = [
+  '30468-asterix-and-the-power-of-the-gods-europe-en-fr-de-es',
+  '30262-daffy-duck-in-hollywood-europe-en-fr-de-es-it',
+  '30223-fifa-98-road-to-world-cup-europe-en-fr-es-it-sv',
+  '17231-light-crusader-europe-en-fr-de-es',
+  '28414-smurfs-the-europe-en-fr-de-es-it',
+  '29868-marsupilami-usa-en-fr-de-es-it',
+  '42046-sonic-classic-heroes',
+  '42251-sonic-generations-2',
+  '28249-sonic-the-hedgehog-usa-europe-hack-by-lost-v1-0-sonic-jam-s-easy-mode',
+  '17236-sonic-the-hedgehog-2-world-rev-a',
+  '30002-sonic-the-hedgehog-3-europe',
+  '29209-sonic-knuckles-sonic-the-hedgehog-3-world',
+  '28257-sonic-knuckles-world',
+  '19010-where-in-the-world-is-carmen-sandiego-usa-europe-en-fr-de-es-it'
+]
+
 //Array de todos los iframes
-const iframes = [iframespsx, iframesn64, iframesgba, iframesnds, iframessnes, iframesarcade];
+const iframes = [iframespsx, iframesn64, iframesgba, iframesnds, iframessnes, iframesarcade, iframesgenesis];
