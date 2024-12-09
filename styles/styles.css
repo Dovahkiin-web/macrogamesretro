@@ -82,6 +82,34 @@ header div a {
   animation: rotation 1s linear infinite;
 }
 
+/*Estilos barra busqueda*/
+/* Estilo para la barra de búsqueda */
+.search-container {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#search-results {
+  margin-top: 20px;
+  padding: 10px;
+}
+/*FIN estilos barra de busqueda*/
+
 @keyframes rotation {
   0% {
       transform: rotate(0deg);
@@ -93,6 +121,8 @@ header div a {
 
 main {
   padding: 40px 0;
+  min-height: 73vh;
+  text-align: center;
   background-color: #333;
   opacity: 0; /* Inicialmente oculto */
   transition: opacity 0.3s ease; /* Animación de desvanecimiento */

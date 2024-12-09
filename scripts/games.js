@@ -255,7 +255,7 @@ const iframesatari = [
   '34897-alien-vs-predator-world',
   '34925-checkered-flag-world',
   '34922-club-drive-world',
-  '34891-doom-world',
+  '', //34891-doom-world
   '34909-dragon-the-bruce-lee-story-world',
   '34931-fight-for-life-world',
   '34924-iron-soldier-world-v1-04',
