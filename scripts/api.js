@@ -41,5 +41,5 @@ function animacionCargaBusqueda(main) { //Como parametro le pasamos el nombre de
             // Mostrar el contenido de la página con una transición suave
             mainSearch.classList.add('show');
         }, 200); // Esperar el tiempo de la animación de desvanecimiento
-    }, 300); // Esperar 0.3 segundos para mostrar el loader antes de la transición
+    }, 1500); // Esperar 0.3 segundos para mostrar el loader antes de la transición
 }

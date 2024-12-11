@@ -6,7 +6,7 @@ function cargarMainSearch() {
         <button onclick="buscar()">Buscar</button>
       </div>
 
-      <div id="div_loader_search" style="display:none;"><span id="loader"></span></div>
+      <div id="div_loader_search" style="display:none;"><span id="loader" class="loader-games"></span></div>
     
       <!-- main: aqui se colocara desde JavaScript, todo el codigo del catalogo de la consola seleccionada-->
       <main id="main_search_games"></main>`;
