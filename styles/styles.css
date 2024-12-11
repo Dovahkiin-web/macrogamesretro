@@ -23,14 +23,18 @@ header {
   text-align: center;
 }
 
-/*El texto que pone -- RETRO --*/
-header .retro {
-  font-family: 'Press Start 2P', cursive;
-  color: red;
-  font-size: 15px;
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-content: center;
+  align-items: center;
 }
 
-nav ul {
+nav {
+  position: relative;
+}
+
+.menu-nav {
   display: flex;
   justify-content: center;
   list-style-type: none;
@@ -53,10 +57,59 @@ nav ul li a:hover {
   border-bottom: 1px solid red;
 }
 
-header div a {
-  color: #fff;
-  text-decoration: none;
+/* Botón hamburguesa */
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+/*FIN boton hamburguesa*/
+
+/* Animación del menú */
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+/*FIN animacuin del menu*/
 
 #div_loader {
   top: 0;
@@ -319,21 +372,46 @@ footer p {
     grid-template-rows: 1fr;
   }
 }
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 2em;
   }
 
-  nav hr {
-    margin: 0 15% 0 15%;
+  .container {
+    display: flex;
+    justify-content: space-around;
   }
 
-  nav ul {
+  .menu-button-container {
+    display: flex;
+  }
+
+  .menu-nav {
+    display: none; /* Ocultar el menú en pantallas pequeñas */
+    position: absolute;
+    left: 100;
+    right: 0;
+    margin: 52px 0 0 0;
     flex-direction: column;
+    align-items: center;
+    background-color: #333;
   }
 
-  nav ul li {
-    margin: 10px 0;
+  #menu-toggle:checked ~ .menu-nav {
+    display: flex; /* Mostrar el menú cuando el checkbox está marcado */
+  }
+
+  .menu-nav li {
+    width: 100%;
+    padding: 1em 0;
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+  }
+
+  .menu-nav li:not(:last-child) {
+    border-bottom: 1px solid #555;
   }
 
   .game-item {

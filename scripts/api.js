@@ -43,3 +43,9 @@ function animacionCargaBusqueda(main) { //Como parametro le pasamos el nombre de
         }, 200); // Esperar el tiempo de la animación de desvanecimiento
     }, 1500); // Esperar 0.3 segundos para mostrar el loader antes de la transición
 }
+
+//Funcion para el menu hamburguesa
+document.getElementById('hamburger').addEventListener('click', function() {
+    var menu = document.querySelector('.menu-nav');
+    menu.classList.toggle('open');
+  });

@@ -20,31 +20,24 @@
   <!-- header: tenemos el logo y la barra de navegacion -->
   <header>
     <div class="container">
-      <a href="./index.html"><img src="./assets/images/logo.png" height="70" width="350"></a>
+      <a href="./index.html"><img src="./assets/images/logo.png" height="60" width="300"></a>
       <nav>
-        <ul>
-          <hr>
+        <input type="checkbox" id="menu-toggle" />
+        <label class="menu-button-container" for="menu-toggle">
+        <span class="menu-button"></span>
+        </label>
+        <ul class="menu-nav">
           <li><a href="./search_game.html"><span class="material-symbols-outlined">search</span></a></li>
-          <hr>
           <!-- Al hacer click los enlaces no redirigiran a ningun lado, en cambio ejecutaran la funcion para imprimir el catalogo de la consola seleccionada-->
           <li><a href="./game_select.html?consola=PSX" id="PSX">PSX</a></li>
-          <hr>
           <li><a href="./game_select.html?consola=N64" id="N64">N64</a></li>
-          <hr>
           <li><a href="./game_select.html?consola=GBA" id="GBA">GBA</a></li>
-          <hr>
           <li><a href="./game_select.html?consola=NDS" id="NDS">NDS</a></li>
-          <hr>
           <li><a href="./game_select.html?consola=SNES" id="SNES">SNES</a></li>
-          <hr>
           <li><a href="./game_select.html?consola=ARCADE" id="ARCADE">ARCADE</a></li>
-          <hr>
           <li><a href="./game_select.html?consola=GENESIS" id="GENESIS">GENESIS</a></li>
-          <hr>
           <li><a href="./game_select.html?consola=ATARI" id="ATARI">ATARI</a></li>
-          <hr>
           <li><a href="./login.html"><i class="material-icons" style="font-size: 18px;">input</i></a></li>
-          <hr>
         </ul>
       </nav>
     </div>
