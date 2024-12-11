@@ -6,27 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MacroGames - Retro</title>
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="icon" href="./assets/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="icon" href="./assets/images/favicon.ico">
-  <script src="./scripts/main.js" defer></script>
   <script src="./scripts/games.js" defer></script>
   <script src="./scripts/play.js" defer></script>
   <script src="./scripts/api.js" defer></script>
+  <script src="./scripts/search.js" defer></script>
 </head>
-<!-- body: Cuando se cargue por completo, ejecuta la funcion -->
-<body onload="cargarCatalogo()">
+<body onload="cargarMainSearch()">
 
   <!-- header: tenemos el logo y la barra de navegacion -->
   <header>
     <div class="container">
-      <a href="#"><img src="./assets/images/logo.png" height="70" width="350"></a>
+      <a href="./index.html"><img src="./assets/images/logo.png" height="70" width="350"></a>
       <nav>
         <ul>
           <hr>
           <li><a href="./search_game.html">BUSCAR</a></li>
           <hr>
-          <!-- Al redireccionar, le pasamos tambien un parametro llamado consola, con el valor de la consola seleccionada -->
+          <!-- Al hacer click los enlaces no redirigiran a ningun lado, en cambio ejecutaran la funcion para imprimir el catalogo de la consola seleccionada-->
           <li><a href="./game_select.html?consola=PSX" id="PSX">PSX</a></li>
           <hr>
           <li><a href="./game_select.html?consola=N64" id="N64">N64</a></li>
@@ -45,7 +44,7 @@
           <hr>
           <li><a href="./login.html"><i class="material-icons" style="font-size: 18px;">input</i></a></li>
           <hr>
-       </ul>
+        </ul>
       </nav>
     </div>
   </header>
@@ -53,9 +52,8 @@
   <!-- Mostrará que está cargando antes de que la pagina se cargue por completo -->
   <div id="div_loader"><span id="loader"></span></div>
 
-  <!-- main: aqui se colocara desde JavaScript, todo el codigo del catalogo-->
-  <main id="main_index" style="display: none;"></main>
-
+  <main id="main_search" style="display: none;"></main>
+  
   <!-- footer: copyright -->
   <footer>
     <div class="container">

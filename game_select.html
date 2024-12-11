@@ -23,7 +23,7 @@
       <nav>
         <ul>
           <hr>
-          <li><a href="./game_select.html">BUSCAR</a></li>
+          <li><a href="./search_game.html">BUSCAR</a></li>
           <hr>
           <!-- Al hacer click los enlaces no redirigiran a ningun lado, en cambio ejecutaran la funcion para imprimir el catalogo de la consola seleccionada-->
           <li><a href="#" onclick="cargarCatalogoSeleccionado(this.id)" id="PSX">PSX</a></li>
@@ -52,14 +52,9 @@
   <!-- Mostrará que está cargando antes de que la pagina se cargue por completo -->
   <div id="div_loader"><span id="loader"></span></div>
 
-  <!-- Barra de busqueda -->
-  <div class="search-container">
-    <input type="text" id="search-input" placeholder="Buscar...">
-    <button onclick="buscar()">Buscar</button>
-  </div>
-
   <!-- main: aqui se colocara desde JavaScript, todo el codigo del catalogo de la consola seleccionada-->
   <main id="main_select" style="display: none;"></main>
+  
   <!-- footer: copyright -->
   <footer>
     <div class="container">
